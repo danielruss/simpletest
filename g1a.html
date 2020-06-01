@@ -1,0 +1,146 @@
+html>
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="grid.css" />
+  </head>
+  <body>
+    <div class="container question">
+      During the past 12 months, about how much timedo you usually spend doing these activities while you are at work? When thinking
+      about your answers, please think about the time you spend at your job, not counting time traveling to and from work. If you
+      exercise during your workday (such a going on walks during breaks or working out on lunch breaks), please include those
+      activities.
+
+      <div class="d-none d-lg-block" style="background-color: beige;">
+        <div class="d-flex">
+          <div class="col" ></div>
+          <div class="col text-center">Typical time per work day</div>
+        </div>
+        <div class="d-flex align-items-center border">
+          <div class="col">Select an answer for each row below:</div>
+          <div class="col-1">None</div>
+          <div class="col-1">Less than 30 min.</div>
+          <div class="col-1">30 min.</div>
+          <div class="col-1">45 min.</div>
+          <div class="col-1">1 hr.</div>
+          <div class="col-1">1 to 2.9 hrs.</div>
+          <div class="col-1">3 to 4.9 hrs.</div>
+        </div>
+
+        <div class="d-flex align-items-stretch">
+          <div class="col d-flex align-items-center justify-content-center border">
+            Sitting with small arm movements (for example, desk or computer work, light assembly, driving, etc.)
+          </div>
+          <div class="col-1 d-flex align-items-center justify-content-center border">
+            <input type="radio" name="WORKACTA" value="0" id="WORKACTA_0" onclick="WORKACTA_0sm.checked=WORKACTA_0.checked" />
+          </div>
+          <div class="col-1 d-flex align-items-center justify-content-center border">
+            <input type="radio" name="WORKACTA" value="1" id="WORKACTA_1" onclick="WORKACTA_1sm.checked=WORKACTA_1.checked" />
+          </div>
+          <div class="col-1 d-flex align-items-center justify-content-center border">
+            <input type="radio" name="WORKACTA" value="2" id="WORKACTA_2" onclick="WORKACTA_2sm.checked=WORKACTA_2.checked" />
+          </div>
+          <div class="col-1 d-flex align-items-center justify-content-center border">
+            <input type="radio" name="WORKACTA" value="3" id="WORKACTA_3" onclick="WORKACTA_3sm.checked=WORKACTA_3.checked" />
+          </div>
+          <div class="col-1 d-flex align-items-center justify-content-center border">
+            <input type="radio" name="WORKACTA" value="4" id="WORKACTA_4" onclick="WORKACTA_4sm.checked=WORKACTA_4.checked" />
+          </div>
+          <div class="col-1 d-flex align-items-center justify-content-center border">
+            <input type="radio" name="WORKACTA" value="5" id="WORKACTA_5" onclick="WORKACTA_5sm.checked=WORKACTA_5.checked" />
+          </div>
+          <div class="col-1 d-flex align-items-center justify-content-center border">
+            <input type="radio" name="WORKACTA" value="6" id="WORKACTA_6" onclick="WORKACTA_6sm.checked=WORKACTA_6.checked" />
+          </div>
+        </div>
+        <div class="d-flex align-items-stretch">
+            <div class="col d-flex align-items-center justify-content-center border">
+              Standing with some walking (for example, as a store clerk, filing, making copies, walking to/from meetings, working on
+              an assembly line, etc.)
+            </div>
+            <div class="col-1 d-flex align-items-center justify-content-center border">
+              <input type="radio" name="WORKACTB" value="0" id="WORKACTB_0" onclick="WORKACTB_0sm.checked=WORKACTB_0.checked" />
+            </div>
+            <div class="col-1 d-flex align-items-center justify-content-center border">
+              <input type="radio" name="WORKACTB" value="1" id="WORKACTB_1" onclick="WORKACTB_1sm.checked=WORKACTB_1.checked" />
+            </div>
+            <div class="col-1 d-flex align-items-center justify-content-center border">
+              <input type="radio" name="WORKACTB" value="2" id="WORKACTB_2" onclick="WORKACTB_2sm.checked=WORKACTB_2.checked" />
+            </div>
+            <div class="col-1 d-flex align-items-center justify-content-center border">
+              <input type="radio" name="WORKACTB" value="3" id="WORKACTB_3" onclick="WORKACTB_3sm.checked=WORKACTB_3.checked" />
+            </div>
+            <div class="col-1 d-flex align-items-center justify-content-center border">
+              <input type="radio" name="WORKACTB" value="4" id="WORKACTB_4" onclick="WORKACTB_4sm.checked=WORKACTB_4.checked" />
+            </div>
+            <div class="col-1 d-flex align-items-center justify-content-center border">
+              <input type="radio" name="WORKACTB" value="5" id="WORKACTB_5" onclick="WORKACTB_5sm.checked=WORKACTB_5.checked" />
+            </div>
+            <div class="col-1 d-flex align-items-center justify-content-center border">
+              <input type="radio" name="WORKACTB" value="6" id="WORKACTB_6" onclick="WORKACTB_6sm.checked=WORKACTB_6.checked" />
+            </div>
+          </div>
+  
+          <div class="d-flex align-items-stretch">
+            <div class="col d-flex align-items-center justify-content-center border">
+              Walking and carrying materials weighing less than 50 pounds (for example, delivering mail, waiting tables, light
+              construction, janitorial work, etc.)
+            </div>
+            <div class="col-1 d-flex align-items-center justify-content-center border">
+              <input type="radio" id="WORKACTC_0" value="0" name="WORKACTC" onclick="WORKACTCsm_0.checked=WORKACTC_0.checked" />
+            </div>
+            <div class="col-1 d-flex align-items-center justify-content-center border">
+              <input type="radio" id="WORKACTC_1" value="1" name="WORKACTC" onclick="WORKACTCsm_1.checked=WORKACTC_1.checked" />
+            </div>
+            <div class="col-1 d-flex align-items-center justify-content-center border">
+              <input type="radio" id="WORKACTC_2" value="2" name="WORKACTC" onclick="WORKACTCsm_2.checked=WORKACTC_2.checked" />
+            </div>
+            <div class="col-1 d-flex align-items-center justify-content-center border">
+              <input type="radio" id="WORKACTC_3" value="3" name="WORKACTC" onclick="WORKACTCsm_3.checked=WORKACTC_3.checked" />
+            </div>
+            <div class="col-1 d-flex align-items-center justify-content-center border">
+              <input type="radio" id="WORKACTC_4" value="4" name="WORKACTC" onclick="WORKACTCsm_4.checked=WORKACTC_4.checked" />
+            </div>
+            <div class="col-1 d-flex align-items-center justify-content-center border">
+              <input type="radio" id="WORKACTC_5" value="5" name="WORKACTC" onclick="WORKACTCsm_5.checked=WORKACTC_5.checked" />
+            </div>
+            <div class="col-1 d-flex align-items-center justify-content-center border">
+              <input type="radio" id="WORKACTC_6" value="6" name="WORKACTC" onclick="WORKACTCsm_6.checked=WORKACTC_6.checked" />
+            </div>
+          </div>
+  
+          <div class="d-flex align-items-stretch">
+            <div class="col d-flex align-items-center justify-content-center border">
+              Walking and heavy manual work often working with materials weighing over 50 pounds (for example, digging and shoveling,
+              chopping wood, laying bricks, stacking hay, or other heavy manual labor, etc.)
+            </div>
+            <div class="col-1 d-flex align-items-center justify-content-center border">
+              <input type="radio" id="WORKACTD_0" value="0" name="WORKACTD" onclick="WORKACTDsm_0.checked=WORKACTD_0.checked" />
+            </div>
+            <div class="col-1 d-flex align-items-center justify-content-center border">
+              <input type="radio" id="WORKACTD_1" value="1" name="WORKACTD" onclick="WORKACTDsm_1.checked=WORKACTD_1.checked" />
+            </div>
+            <div class="col-1 d-flex align-items-center justify-content-center border">
+              <input type="radio" id="WORKACTD_2" value="2" name="WORKACTD" onclick="WORKACTDsm_2.checked=WORKACTD_2.checked" />
+            </div>
+            <div class="col-1 d-flex align-items-center justify-content-center border">
+              <input type="radio" id="WORKACTD_3" value="3" name="WORKACTD" onclick="WORKACTDsm_3.checked=WORKACTD_3.checked" />
+            </div>
+            <div class="col-1 d-flex align-items-center justify-content-center border">
+              <input type="radio" id="WORKACTD_4" value="4" name="WORKACTD" onclick="WORKACTDsm_4.checked=WORKACTD_4.checked" />
+            </div>
+            <div class="col-1 d-flex align-items-center justify-content-center border">
+              <input type="radio" id="WORKACTD_5" value="5" name="WORKACTD" onclick="WORKACTDsm_5.checked=WORKACTD_5.checked" />
+            </div>
+            <div class="col-1 d-flex align-items-center justify-content-center border">
+              <input type="radio" id="WORKACTD_6" value="6" name="WORKACTD" onclick="WORKACTDsm_6.checked=WORKACTD_6.checked" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </body>
+</html> 
