@@ -15,11 +15,18 @@
     <script src="index2.js" type="module"></script>
   </head>
   <body>
-    <form id="prevResForm">
-      <input id="firstName" type="text" placeholder="first name" /><br />
-      <input id="age" type="number" placeholder="age" /><br />
-      <input type="submit" />
-    </form>
+    <div class="container">
+      <form id="prevResForm">
+        <input id="firstName" type="text" placeholder="first name" /><br />
+        <input id="age" type="number" placeholder="age" /><br />
+        <label for="sex">Sex at birth</label><select id="sex">
+        <option value="1">male</option>
+        <option value="2">female</option>
+        <option value="3">other</option>
+      </input>
+        <input type="submit" />
+      </form>
+    </div>
     <div id="root" class="container"></div>
     <script
       src="https://code.jquery.com/jquery-3.4.1.slim.min.js"

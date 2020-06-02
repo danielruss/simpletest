@@ -42,6 +42,7 @@ let listener = async function (e) {
   e.preventDefault();
   let firstName = e.target.querySelector("#firstName").value;
   let age = e.target.querySelector("#age").value;
+  let sex = e.target.querySelector("#sex").value;
   e.target.style.display = "none";
 
   const response = await transform.render(
@@ -51,7 +52,7 @@ let listener = async function (e) {
       activate: true,
     },
     "root",
-    { firstName: firstName, age: age }
+    { firstName: firstName, age: age, SEX: sex }
   );
 
   if (response) {
