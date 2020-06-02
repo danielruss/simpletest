@@ -1,7 +1,7 @@
 import { transform } from "https://episphere.github.io/quest/replace2.js";
 import { rbAndCbClick } from "https://episphere.github.io/quest/questionnaire.js";
 
-export function buildHTML(soccerResults, question, responseElement) {
+function buildHTML(soccerResults, question, responseElement) {
   if (responseElement) {
     let tmp = responseElement.cloneNode(false);
     question.replaceChild(tmp, responseElement);
@@ -38,14 +38,20 @@ export function buildHTML(soccerResults, question, responseElement) {
   responseElement.append(resp, label);
 }
 
-window.onload = async () => {
+let listener = async function (e) {
+  e.preventDefault();
+  let firstName = e.target.querySelector("#firstName").value;
+  let age = e.target.querySelector("#age").value;
+  e.target.style.display = "none";
+
   const response = await transform.render(
     {
       url: "https://jonasalmeida.github.io/privatequest/demo2.txt",
       //url: "https://danielruss.github.io/simpletest/SITFTest.txt",
       activate: true,
     },
-    "root"
+    "root",
+    { firstName: firstName, age: age }
   );
 
   if (response) {
@@ -76,3 +82,5 @@ window.onload = async () => {
     });
   }
 };
+
+document.getElementById("prevResForm").addEventListener("submit", listener);
