@@ -85,3 +85,14 @@ let listener = async function (e) {
 };
 
 document.getElementById("prevResForm").addEventListener("submit", listener);
+
+document.getElementById("clearLF").addEventListener("click", function (event) {
+  localforage
+    .clear()
+    .then(() => {
+      console.log("lf cleared");
+    })
+    .catch((err) => {
+      console.log("error while clearing lf.  ", err);
+    });
+});
