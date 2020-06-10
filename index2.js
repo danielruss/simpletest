@@ -10,9 +10,10 @@ function buildHTML(soccerResults, question, responseElement) {
     responseElement = document.createElement("div");
     responseElement.classList.add("response");
     question.insertBefore(responseElement, question.childNodes[0]);
-    let questionText = document.createTextNode("Please identify the occupation category that best describes this job.");
-    responseElement.append(questionText);
   }
+  let questionText = document.createTextNode("Please identify the occupation category that best describes this job.");
+  responseElement.append(questionText);
+
   soccerResults.forEach((soc, indx) => {
     let resp = document.createElement("input");
     resp.type = "radio";
