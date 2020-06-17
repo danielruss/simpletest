@@ -1,0 +1,24 @@
+<html>
+  <head> </head>
+  <body>
+    <form id="myForm">
+      <input type="text" />
+      <input type="submit" id="lala1" value="prev" />
+      <input type="submit" id="lala2" value="next" />
+    </form>
+
+    <script>
+      myForm.querySelectorAll("input[type='submit']").forEach((submitButton) => {
+        submitButton.addEventListener("click", (event) => {
+          console.log("click");
+          event.target.form.clickType = event.target.value;
+        });
+      });
+      myForm.addEventListener("submit", (event) => {
+        console.log("submit");
+        event.preventDefault();
+        console.log(event.target.clickType);
+      });
+    </script>
+  </body>
+</html>
