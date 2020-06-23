@@ -1,5 +1,5 @@
-import { transform } from "https://episphere.github.io/quest/replace2.js";
-import { rbAndCbClick } from "https://episphere.github.io/quest/questionnaire.js";
+import { transform } from "http://localhost:5501/replace2.js";
+import { rbAndCbClick } from "http://localhost:5501/questionnaire.js";
 
 function buildHTML(soccerResults, question, responseElement) {
   if (responseElement) {
@@ -35,7 +35,6 @@ function buildHTML(soccerResults, question, responseElement) {
   let label = document.createElement("label");
   label.setAttribute("for", `${question.id}_NOTA`);
   label.innerText = "NONE OF THE ABOVE";
-
   responseElement.append(resp, label);
 }
 
@@ -48,8 +47,8 @@ let listener = async function (e) {
 
   const response = await transform.render(
     {
-      url: "http://localhost:5501/questionnaires/d2.txt",
-      //url: "https://danielruss.github.io/simpletest/SITFTest.txt",
+      //url: "http://localhost:5501/questionnaires/d2.txt",
+      url: "http://localhost:5501/questionnaires/SITFTest.txt",
       activate: true,
     },
     "root",
