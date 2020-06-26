@@ -40,11 +40,7 @@ function buildHTML(soccerResults, question, responseElement) {
 }
 
 let listener = async function (e) {
-  e.preventDefault();
-  let firstName = e.target.querySelector("#firstName").value;
-  let age = e.target.querySelector("#age").value;
-  let sex = e.target.querySelector("#sex").value;
-  e.target.style.display = "none";
+  localforage.clear();
 
   const response = await transform.render(
     {
@@ -52,7 +48,7 @@ let listener = async function (e) {
       activate: true,
     },
     "root",
-    { firstName: firstName, age: age, SEX: sex }
+    {}
   );
 
   if (response) {
@@ -84,15 +80,4 @@ let listener = async function (e) {
   }
 };
 
-document.getElementById("prevResForm").addEventListener("submit", listener);
-
-document.getElementById("clearLF").addEventListener("click", function (event) {
-  localforage
-    .clear()
-    .then(() => {
-      console.log("lf cleared");
-    })
-    .catch((err) => {
-      console.log("error while clearing lf.  ", err);
-    });
-});
+window.addEventListener("load", listener);
