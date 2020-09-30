@@ -5,11 +5,12 @@
 
 [OCCUPTN1?]
 
+[EMPLYR1?] For this job, who is your employer?
+|__|size=50|
+
 [WORK7?] What was your longest-held job? Please be descriptive. For example, high school math teacher, emergency room nurse, automobile painter.
 |__|WORK7_JOBTITLE|
 
-[EMPLYR1?] For this job, who is your employer?
-|__|size=50|
 [OCCUPTN2?]
 
 
