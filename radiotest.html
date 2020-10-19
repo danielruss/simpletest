@@ -1,0 +1,22 @@
+<html>
+  <head> </head>
+  <body>
+      <form id="lalala">
+          <input type="radio" id="c1" name="r1"> 1</input>
+          <input type="radio" id="c2" name="r1"> 2</input>
+          <input type="radio" id="c3" name="r1"> 3</input>
+      </form>
+
+      <script>
+          let ff=function(event){
+            console.log(event.target)
+            console.log(event.target.clicked)
+            console.log(event.target.checked)
+          }
+          let form=document.getElementById("lalala");
+          [...form.children].filter(x=>x.type=="radio").forEach(x=>{
+              x.addEventListener("click",ff)
+          })
+      </script>
+  </body>
+</html>

@@ -1,0 +1,190 @@
+<html>
+  <head>
+    <style>
+      .directions {
+        grid-column: 1 / -1;
+        padding-bottom: 10px;
+        padding-top: 5px;
+      }
+
+      /* small screen */
+      @media screen and (max-width: 599px) {
+        .q3,
+        .q4,
+        .q5,
+        .q6,
+        .q7 {
+          display: grid;
+          grid-template-columns: 1fr;
+        }
+
+        .qlab {
+          display: inline-block;
+        }
+
+        .gridresponse {
+          justify-self: center;
+          width: 85%;
+        }
+
+        input[type="checkbox"] {
+          display: none;
+        }
+        label {
+          width: 100%;
+          text-align: center;
+        }
+
+        input[type="checkbox"] + label {
+          border: solid 2px white;
+          background-color: white;
+          color: black;
+        }
+        input[type="checkbox"]:checked + label {
+          border: solid 2px lightgray;
+          background-color: lightgray;
+          color: black;
+        }
+        input[type="checkbox"]:hover + label {
+          border: solid 2px darkgrey;
+        }
+
+        .r1 {
+          display: none;
+        }
+      }
+
+      /* large screen*/
+      @media screen and (min-width: 600px) {
+        .q3 {
+          display: grid;
+          grid-template-columns: minmax(auto, 50%) repeat(3, auto);
+        }
+        .q4 {
+          display: grid;
+          grid-template-columns: minmax(auto, 50%) repeat(4, auto);
+        }
+        .q5 {
+          display: grid;
+          grid-template-columns: minmax(auto, 50%) repeat(5, auto);
+        }
+        .q6 {
+          display: grid;
+          grid-template-columns: minmax(auto, 50%) repeat(6, auto);
+        }
+        .q7 {
+          display: grid;
+          grid-template-columns: minmax(auto, 50%) repeat(7, auto);
+        }
+
+        .qlab {
+          display: none;
+        }
+        .r1 {
+          display: inline;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="q3">
+      <div class="directions">For each of the following questions selected the best response</div>
+      <div class="r1"></div>
+      <div class="r1">0-1</div>
+      <div class="r1">1-2</div>
+      <div class="r1">2+</div>
+
+      <div>How many cookies do you eat in a day</div>
+      <div class="gridresponse">
+        <input id="c1" name="cookies" class="cbrb" type="checkbox" /><label for="c1" class="qlab">0-1</label>
+      </div>
+      <div class="gridresponse">
+        <input id="c2" name="cookies" class="cbrb" type="checkbox" /><label for="c2" class="qlab">1-2</label>
+      </div>
+      <div class="gridresponse">
+        <input id="c3" name="cookies" class="cbrb" type="checkbox" /><label for="c3" class="qlab">2+</label>
+      </div>
+
+      <div>How many ears of corn do you eat in a day</div>
+      <div class="gridresponse">
+        <input id="corn1" name="corn" class="cbrb" type="checkbox" /><label for="corn1" class="qlab">0-1</label>
+      </div>
+      <div class="gridresponse">
+        <input id="corn2" name="corn" class="cbrb" type="checkbox" /><label for="corn2" class="qlab">1-2</label>
+      </div>
+      <div class="gridresponse">
+        <input id="corn3" name="corn" class="cbrb" type="checkbox" /><label for="corn3" class="qlab">2+</label>
+      </div>
+    </div>
+    <br />
+    <br />
+    <div class="q7">
+      <div class="directions">For each of the following questions selected the best response</div>
+      <div class="r1"></div>
+      <div class="r1">0-1</div>
+      <div class="r1">2-3</div>
+      <div class="r1">4-5</div>
+      <div class="r1">6-7</div>
+      <div class="r1">8-9</div>
+      <div class="r1">10-11</div>
+      <div class="r1">12+</div>
+      <div>How many apples do you eat in a day</div>
+      <div class="gridresponse">
+        <input id="apples1" name="apples" class="cbrb" type="checkbox" /><label for="apples1" class="qlab">0-1</label>
+      </div>
+      <div class="gridresponse">
+        <input id="apples2" name="apples" class="cbrb" type="checkbox" /><label for="apples2" class="qlab">2-3</label>
+      </div>
+      <div class="gridresponse">
+        <input id="apples3" name="apples" class="cbrb" type="checkbox" /><label for="apples3" class="qlab">4-5</label>
+      </div>
+      <div class="gridresponse">
+        <input id="apples4" name="apples" class="cbrb" type="checkbox" /><label for="apples4" class="qlab">6-7</label>
+      </div>
+      <div class="gridresponse">
+        <input id="apples5" name="apples" class="cbrb" type="checkbox" /><label for="apples5" class="qlab">8-9</label>
+      </div>
+      <div class="gridresponse">
+        <input id="apples6" name="apples" class="cbrb" type="checkbox" /><label for="apples6" class="qlab">9-10</label>
+      </div>
+      <div class="gridresponse">
+        <input id="apples7" name="apples" class="cbrb" type="checkbox" /><label for="apples7" class="qlab">11+</label>
+      </div>
+      <div>How many peaches do you eat in a day</div>
+      <div class="gridresponse">
+        <input id="peaches1" name="peaches" class="cbrb" type="checkbox" /><label for="peaches1" class="qlab">0-1</label>
+      </div>
+      <div class="gridresponse">
+        <input id="peaches2" name="peaches" class="cbrb" type="checkbox" /><label for="peaches2" class="qlab">2-3</label>
+      </div>
+      <div class="gridresponse">
+        <input id="peaches3" name="peaches" class="cbrb" type="checkbox" /><label for="peaches3" class="qlab">4-5</label>
+      </div>
+      <div class="gridresponse">
+        <input id="peaches4" name="peaches" class="cbrb" type="checkbox" /><label for="peaches4" class="qlab">6-7</label>
+      </div>
+      <div class="gridresponse">
+        <input id="peaches5" name="peaches" class="cbrb" type="checkbox" /><label for="peaches5" class="qlab">8-9</label>
+      </div>
+      <div class="gridresponse">
+        <input id="peaches6" name="peaches" class="cbrb" type="checkbox" /><label for="peaches6" class="qlab">9-10</label>
+      </div>
+      <div class="gridresponse">
+        <input id="peaches7" name="peaches" class="cbrb" type="checkbox" /><label for="peaches7" class="qlab">11+</label>
+      </div>
+    </div>
+
+    <script>
+      function cb_radio(event) {
+        let choices = Array.from(document.getElementsByName(event.target.name));
+        choices.forEach((cb) => {
+          cb.checked = cb == event.target ? cb.checked : false;
+        });
+      }
+      let cbrb = Array.from(document.getElementsByClassName("cbrb"));
+      cbrb.forEach((cb) => {
+        cb.addEventListener("change", cb_radio);
+      });
+    </script>
+  </body>
+</html>

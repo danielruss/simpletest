@@ -1,0 +1,45 @@
+<html>
+  <head>
+    <style>
+      .grid {
+        display: grid;
+        padding: 10px;
+        grid-template-columns: auto;
+        background-color: cornflowerblue;
+        gap: 5px 10px;
+      }
+      .flex {
+        display: flex;
+        background-color: cornsilk;
+        padding: 10px;
+        justify-content: space-between;
+      }
+      .fitem {
+        width: 300px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grid">
+      <div class="flex">
+        <div class="fitem">Select an answer for each row below:</div>
+        <div class="fitem">None</div>
+        <div class="fitem">Less than 30 min</div>
+        <div class="fitem">30 min</div>
+        <div class="fitem">45 min</div>
+        <div class="fitem">1 hr</div>
+        <div class="fitem">9 or more hours</div>
+        <div class="fitem"></div>
+      </div>
+      <div class="flex">
+        <div>Sitting with small arm movements (for example, desk or computer work, light assembly, driving, etc.)</div>
+        <div><input type="radio" name="q1" value="q1a" /></div>
+        <div><input type="radio" name="q1" value="q1b" /></div>
+        <div><input type="radio" name="q1" value="q1c" /></div>
+        <div><input type="radio" name="q1" value="q1d" /></div>
+        <div><input type="radio" name="q1" value="q1e" /></div>
+        <div><input type="radio" name="q1" value="q1f" /></div>
+      </div>
+    </div>
+  </body>
+</html>

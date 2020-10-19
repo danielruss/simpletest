@@ -1,0 +1,75 @@
+<html>
+  <!-- https://www.freecodecamp.org/news/https-medium-com-nakayama-shingo-creating-responsive-tables-with-pure-css-using-the-grid-layout-module-8e0ea8f03e83/  -->
+  <head>
+    <style>
+        li{
+            list-style: none;
+        }
+        @media screen and (min-width: 737px) {
+      .row{
+          display: grid;
+          grid-template-columns: repeat();
+          background-color: bisque;
+      }
+        }
+
+      .gridbox {
+        display: grid;
+        grid-auto-flow: row;
+      }
+
+    </style>
+  </head>
+  <body>
+    <ol>
+        <li>
+            <div>Select an answer for each row below:</div>
+            <div>None</div>
+            <div>Less than 30 min</div>
+            <div>30 min</div>
+            <div>45 min</div>
+            <div>1 hr</div>
+            <div>9 or more hours</div>
+            <div></div>
+        </li>
+        <li>
+            <div>Sitting with small arm movements (for example, desk or computer work, light assembly, driving, etc.)</div>
+            <div><input type="radio" name="q1" value="q1a" /></div>
+            <div><input type="radio" name="q1" value="q1b" /></div>
+            <div><input type="radio" name="q1" value="q1c" /></div>
+            <div><input type="radio" name="q1" value="q1d" /></div>
+            <div><input type="radio" name="q1" value="q1e" /></div>
+            <div><input type="radio" name="q1" value="q1f" /></div>
+          </div>
+        </li>
+    </ol>
+
+
+
+
+
+    <div class="gridbox">
+
+      <div class="row">
+        <div>Select an answer for each row below:</div>
+        <div>None</div>
+        <div>Less than 30 min</div>
+        <div>30 min</div>
+        <div>45 min</div>
+        <div>1 hr</div>
+        <div>9 or more hours</div>
+        <div></div>
+      </div>
+      <div class="row">
+        <div>Sitting with small arm movements (for example, desk or computer work, light assembly, driving, etc.)</div>
+        <div><input type="radio" name="q1" value="q1a" /></div>
+        <div><input type="radio" name="q1" value="q1b" /></div>
+        <div><input type="radio" name="q1" value="q1c" /></div>
+        <div><input type="radio" name="q1" value="q1d" /></div>
+        <div><input type="radio" name="q1" value="q1e" /></div>
+        <div><input type="radio" name="q1" value="q1f" /></div>
+      </div>
+    </div>
+</div>
+  </body>
+</html>
