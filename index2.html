@@ -13,10 +13,22 @@
     />
     <title>Document</title>
     <script src="index2.js" type="module"></script>
+    <style>
+      #checkRes {
+        min-height: 2em;
+        min-width: 100%;
+        font-family: "Courier New", Courier, monospace;
+      }
+    </style>
   </head>
   <body>
     <div class="container">
       <form id="prevResForm">
+        <p></p>
+        <label for="moduleURL">module URL</label><input type="text" id="moduleURL" />
+        <button type="button" id="checkURL">check url</button>
+        <div id="checkRes">&nbsp;</div>
+        <p></p>
         <p>Module 1 required data from User Profile</p>
         <input id="firstName" type="text" placeholder="first name" /><br />
         <input id="age" type="number" placeholder="age" /><br />
@@ -24,7 +36,7 @@
         <select id="sex">
           <option value="1">male</option>
           <option value="2">female</option>
-          <option value="3">other</option> </select
+          <option value="3">other</option></select
         ><br />
         <br />
         <input type="submit" /><br />
