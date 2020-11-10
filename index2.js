@@ -41,16 +41,23 @@ function buildHTML(soccerResults, question, responseElement) {
 
 let listener = async function (e) {
   e.preventDefault();
-  let firstName = e.target.querySelector("#firstName").value;
-  let age = e.target.querySelector("#age").value;
-  let sex = e.target.querySelector("#sex").value;
+
+  // let firstName = e.target.querySelector("#firstName").value;
+  // let age = e.target.querySelector("#age").value;
+  // let sex = e.target.querySelector("#sex").value;
+  let previousResults = document.getElementById("previousResults").value
+  previousResults = (previousResults.length > 0) ? JSON.parse(previousResults) : {};
+  console.log(previousResults)
+
   let moduleURL = document.getElementById("moduleURL").value
-  e.target.style.display = "none";
+
+  console.log(e.target)
 
   let urlOk = await checkURL(moduleURL)
-  if (!urlOk)  {
+  if (!urlOk) {
     return;
   }
+  e.target.style.display = "none";
 
   const response = await transform.render(
     {
@@ -60,7 +67,8 @@ let listener = async function (e) {
       activate: true,
     },
     "root",
-    { firstName: firstName, age: age, SEX: sex }
+    //{ firstName: firstName, age: age, SEX: sex }
+    previousResults
   );
 
   if (response) {
@@ -92,31 +100,31 @@ let listener = async function (e) {
   }
 };
 
-function checkEvent(e){
+function checkEvent(e) {
   e.preventDefault()
   checkURL(document.getElementById("moduleURL").value)
 }
-async function checkURL(url){
-  let mydiv=document.getElementById("checkRes")
+async function checkURL(url) {
+  let mydiv = document.getElementById("checkRes")
   let resp = true
   try {
-    if(url.length<5) throw new Error("url too short")
+    if (url.length < 5) throw new Error("url too short")
     let response = await fetch(url)
-    if (response.status>400) throw new Error("bad response")
-    let text = await(response.text())
+    if (response.status > 400) throw new Error("bad response")
+    let text = await (response.text())
     //mydiv.innerText=url+":  "+response.status+" "+response.statusText+" "+text
-    mydiv.innerText="URL ok..."
+    mydiv.innerText = "URL ok..."
   } catch (error) {
     console.log(error)
     console.log(url)
-    mydiv.innerText="url:"+url+" Problem with URL... "+error.message
-    resp=false
+    mydiv.innerText = "url:" + url + " Problem with URL... " + error.message
+    resp = false
   }
-  setTimeout(()=>mydiv.innerText="",2000) 
+  setTimeout(() => mydiv.innerText = "", 2000)
   return resp;
 }
 
-document.getElementById("checkURL").addEventListener("click",checkEvent)
+document.getElementById("checkURL").addEventListener("click", checkEvent)
 
 document.getElementById("prevResForm").addEventListener("submit", listener);
 
